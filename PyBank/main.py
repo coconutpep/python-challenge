@@ -28,10 +28,10 @@ print("Greatest Decrease in Profits: ", str(months[changes.index(maxDecrease)]),
 
 output_path = os.path.join("..", "PyBank", "financial_analysis.txt")
 with open(output_path, 'w', newline='') as txtfile:
-    txtfile.write("Financial Analysis")
-    txtfile.write("------------------")
-    txtfile.write("Total Months: %s" % str(monthTotal))
-    txtfile.write("Total: $%s" % str(netTotal))
-    txtfile.write("Average Change: $%s" % str(netAverage))
-    txtfile.write("Greatest Increase in Profits: %s $%s" % (str(months[changes.index(maxIncrease)]), str(maxIncrease)))
-    txtfile.write("Greatest Decrease in Profits: %s $%s" % (str(months[changes.index(maxDecrease)]), str(maxDecrease)))
+    txtfile.write("Financial Analysis\n")
+    txtfile.write("------------------\n")
+    txtfile.write("Total Months: %s\n" % str(monthTotal))
+    txtfile.write("Total: $%s\n" % str(netTotal))
+    txtfile.write("Average Change: $%s\n" % str(netAverage))
+    txtfile.write("Greatest Increase in Profits: %s $%s\n" % (str(months[changes.index(maxIncrease)]), str(maxIncrease)))
+    txtfile.write("Greatest Decrease in Profits: %s $%s\n" % (str(months[changes.index(maxDecrease)]), str(maxDecrease)))
