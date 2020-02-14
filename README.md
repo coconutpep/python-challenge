@@ -18,3 +18,7 @@
   # Fifth Commit
     # main.py file in PyBank code fixed to print to different lines
     # financial_analysis.txt in PyBank is the output of main.py
+
+  # Sixth Commit
+    # main.py file in PyPoll had start of code added for polling data analysis
+      # Currently only calculates the total number of votes
