@@ -6,3 +6,7 @@
   # Second Commit
     # Added Budget data to PyBank folder for analysis
     # Added Polling data to PyPoll folder for analysis
+
+  # Third Commit
+    # main.py file in PyBank contains code that successfully performs statistical analysis of budget_data and prints  to console
+      # Code to write text file still needs fixed.
