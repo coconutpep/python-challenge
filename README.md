@@ -10,3 +10,7 @@
   # Third Commit
     # main.py file in PyBank contains code that successfully performs statistical analysis of budget_data and prints  to console
       # Code to write text file still needs fixed.
+
+  # Fourth Commit
+    # main.py file in PyBank code fixed to print txt file
+      # only prints on one row still needs fixed
