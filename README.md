@@ -22,3 +22,7 @@
   # Sixth Commit
     # main.py file in PyPoll had start of code added for polling data analysis
       # Currently only calculates the total number of votes
+  
+  # Seventh Commit
+    # Fixed code in PyBank's main.py to calculate changes in profit/loss and related statistics rather than just statistics for the profit/loss
+    # Replaiced finanical_analysis.txt with updated accurate example
