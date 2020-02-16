@@ -1,7 +1,7 @@
 import csv
 import os
 
-csvpath = os.path.join('..', 'PyPoll', 'election_data.csv')
+csvpath = os.path.join('.', 'election_data.csv')
 
 votesTotal = 0
 canidates = []
@@ -34,3 +34,16 @@ for canidate in canidates:
 print("-------------------------------")
 print("Winner: " + str(winner))
 print("-------------------------------")
+
+output_path = os.path.join(".", "election_analysis.txt")
+
+with open(output_path, "w", newline="") as finanal:
+    finanal.write("Election Results\n")
+    finanal.write("-------------------------\n")
+    finanal.write("Total Votes: %s\n" % str(votesTotal))
+    finanal.write("-------------------------\n")
+    for canidate in canidates:
+        finanal.write("%s: %s%s (%s)\n" % (canidate, canidatePercents[canidate], "%", canidateVotes[canidate]))
+    finanal.write("-------------------------\n")
+    finanal.write("Winner: %s\n" % str(winner))
+    finanal.write("-------------------------\n")
