@@ -29,3 +29,6 @@
   
   # Eigth Commit
     # Added code to PyPoll's main.py file to find the list of canidates that recieved votes
+
+  # Ninth Commit
+    # Added code to PyPoll's main.py file to create a dictionary of canidates to assign vote totals to specific canidates.
