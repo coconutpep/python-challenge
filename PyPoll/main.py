@@ -16,3 +16,9 @@ with open(csvpath, newline='') as csvfile:
             canidateVotes[row[2]] = 1
         elif row[2] in canidateVotes:
             canidateVotes[row[2]] += 1
+
+canidatePercents = {}
+for canidate in canidateVotes:
+    if canidateVotes[canidate] not in canidatePercents:
+        canidatePercents[canidate] = round(((canidateVotes[canidate] / votesTotal) * 100),3)
+
