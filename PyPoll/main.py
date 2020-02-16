@@ -13,7 +13,9 @@ with open(csvpath, newline='') as csvfile:
         votesTotal += 1
         if row[2] not in canidates:
             canidates.append(row[2])
-            print(canidates)
-        if row[2] not in canidateVotes:
+        elif row[2] not in canidateVotes:
             canidateVotes[row[2]] = 1
-            print(canidateVotes)
+        elif row[2] in canidateVotes:
+            canidateVotes[row[2]] += 1
+
+
