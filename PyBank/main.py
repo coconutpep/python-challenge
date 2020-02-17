@@ -5,21 +5,18 @@ csvpath = os.path.join('..', 'PyBank', 'budget_data.csv')
 
 months = []
 profitloss = []
-changes = []
 netTotal = 0
 with open(csvpath, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     csv_header = next(csvreader)
+    profitloss = [int(row[1]) for row in csvreader]
     for row in csvreader:
         months.append(str(row[0]))
         profitloss.append(int(row[1]))
         netTotal += int(row[1])
     monthTotal = len(months)
 
-for number in profitloss:
-    if profitloss.index(number) != (len(profitloss) - 1):
-        changes.append(profitloss[(profitloss.index(number)) + 1] - profitloss[profitloss.index(number)])
-
+changes = [(profitloss[(profitloss.index(number)) + 1] - profitloss[profitloss.index(number)]) for number in profitloss if profitloss.index(number) != (len(profitloss) - 1)]
 netChange= 0
 for change in changes:
     netChange += change
