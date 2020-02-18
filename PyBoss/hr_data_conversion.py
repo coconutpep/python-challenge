@@ -21,3 +21,10 @@ with open(csv_path, newline="") as employeeData:
         ssns.append(row[3])
         states.append(row[4])
 
+dobsFix = []
+for dob in dobs:
+    month = dob[5:7]
+    day = dob[8:]
+    year = dob[:4]
+    dobjoin = str(month) + "/" + str(day) + "/" + str(year)
+    dobsFix.append(dobjoin)
