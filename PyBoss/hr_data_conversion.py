@@ -92,3 +92,9 @@ for state in states:
     for state_check in stateAbvdict:
         if state_check == state:
             stateAbv.append(stateAbvdict[state_check])
+
+newData = zip(empIDs, firstnames, lastnames, dobsFix, ssnsFix, stateAbv)
+output_file = os.path.join("converted_employee_data.csv")
+with open(output_file, "w", newline="") as datafile:
+    writer = csv.writer(datafile)
+    writer.writerows(newData)
