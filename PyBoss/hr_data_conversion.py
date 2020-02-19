@@ -7,7 +7,7 @@ empIDs = []
 firstnames=[]
 lastnames=[]
 dobs = []
-ssns = []
+sns = []
 states = []
 with open(csv_path, newline="") as employeeData:
     csvreader = csv.reader(employeeData, delimiter=",")
@@ -18,7 +18,7 @@ with open(csv_path, newline="") as employeeData:
         firstnames.append(splitname[0])
         lastnames.append(splitname[1])
         dobs.append(row[2])
-        ssns.append(row[3])
+        sns.append(row[3])
         states.append(row[4])
 
 dobsFix = []
@@ -28,3 +28,10 @@ for dob in dobs:
     year = dob[:4]
     dobjoin = str(month) + "/" + str(day) + "/" + str(year)
     dobsFix.append(dobjoin)
+
+snsFix = []
+for sn in sns:
+    last4 = sn[7:]
+    sn = "***-**-" + str(last4)
+    snsFix.append(sn)
+print(snsFix)
