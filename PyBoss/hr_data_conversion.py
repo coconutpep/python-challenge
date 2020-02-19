@@ -7,7 +7,7 @@ empIDs = []
 firstnames=[]
 lastnames=[]
 dobs = []
-sns = []
+ssns = []
 states = []
 with open(csv_path, newline="") as employeeData:
     csvreader = csv.reader(employeeData, delimiter=",")
@@ -18,7 +18,7 @@ with open(csv_path, newline="") as employeeData:
         firstnames.append(splitname[0])
         lastnames.append(splitname[1])
         dobs.append(row[2])
-        sns.append(row[3])
+        ssns.append(row[3])
         states.append(row[4])
 
 dobsFix = []
@@ -29,9 +29,66 @@ for dob in dobs:
     dobjoin = str(month) + "/" + str(day) + "/" + str(year)
     dobsFix.append(dobjoin)
 
-snsFix = []
-for sn in sns:
+ssnsFix = []
+for sn in ssns:
     last4 = sn[7:]
     sn = "***-**-" + str(last4)
-    snsFix.append(sn)
-print(snsFix)
+    ssnsFix.append(sn)
+
+stateAbv = []
+stateAbvdict = {
+    'Alabama': 'AL',
+    'Alaska': 'AK',
+    'Arizona': 'AZ',
+    'Arkansas': 'AR',
+    'California': 'CA',
+    'Colorado': 'CO',
+    'Connecticut': 'CT',
+    'Delaware': 'DE',
+    'Florida': 'FL',
+    'Georgia': 'GA',
+    'Hawaii': 'HI',
+    'Idaho': 'ID',
+    'Illinois': 'IL',
+    'Indiana': 'IN',
+    'Iowa': 'IA',
+    'Kansas': 'KS',
+    'Kentucky': 'KY',
+    'Louisiana': 'LA',
+    'Maine': 'ME',
+    'Maryland': 'MD',
+    'Massachusetts': 'MA',
+    'Michigan': 'MI',
+    'Minnesota': 'MN',
+    'Mississippi': 'MS',
+    'Missouri': 'MO',
+    'Montana': 'MT',
+    'Nebraska': 'NE',
+    'Nevada': 'NV',
+    'New Hampshire': 'NH',
+    'New Jersey': 'NJ',
+    'New Mexico': 'NM',
+    'New York': 'NY',
+    'North Carolina': 'NC',
+    'North Dakota': 'ND',
+    'Ohio': 'OH',
+    'Oklahoma': 'OK',
+    'Oregon': 'OR',
+    'Pennsylvania': 'PA',
+    'Rhode Island': 'RI',
+    'South Carolina': 'SC',
+    'South Dakota': 'SD',
+    'Tennessee': 'TN',
+    'Texas': 'TX',
+    'Utah': 'UT',
+    'Vermont': 'VT',
+    'Virginia': 'VA',
+    'Washington': 'WA',
+    'West Virginia': 'WV',
+    'Wisconsin': 'WI',
+    'Wyoming': 'WY',
+    }
+for state in states:
+    for state_check in stateAbvdict:
+        if state_check == state:
+            stateAbv.append(stateAbvdict[state_check])
