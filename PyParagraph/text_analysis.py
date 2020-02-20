@@ -9,5 +9,6 @@ wordsLength = {}
 sentenceLength = {}
 with open(textfile, "r") as data:
     dataread = data.read()
-
-print(dataread)
+    wordslist = dataread.split()
+    wordCount += len(wordslist)
+    
