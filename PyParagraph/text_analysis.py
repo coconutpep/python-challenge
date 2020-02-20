@@ -11,4 +11,6 @@ with open(textfile, "r") as data:
     dataread = data.read()
     wordslist = dataread.split()
     wordCount += len(wordslist)
+    sentencelist = re.split("(?<=[.!?]) +", dataread)
+    sentenceCount = len(sentencelist)
     
