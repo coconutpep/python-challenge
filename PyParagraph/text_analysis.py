@@ -5,11 +5,17 @@ textfile = os.path.join(".", "example.txt")
 
 wordCount = 0
 sentenceCount = 0
-wordsLength = {}
+AvgwordsLength = 0
 sentenceLength = {}
 with open(textfile, "r") as data:
     dataread = data.read()
     wordslist = dataread.split()
+    letterTotal = 0
+    for word in wordslist:
+        for char in word:
+            if char in "abcdefghijklmnsopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890":
+                letterTotal += 1
+    AvgwordsLength += letterTotal / len(wordslist)
     wordCount += len(wordslist)
     sentencelist = re.split("(?<=[.!?]) +", dataread)
     sentenceCount = len(sentencelist)
