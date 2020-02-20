@@ -1,7 +1,7 @@
 import re
 import os
 
-textfile = os.path.join(".", "example.txt")
+textfile = os.path.join(".", "paragraph_1.txt")
 
 wordCount = 0
 sentenceCount = 0
