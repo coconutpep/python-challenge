@@ -6,7 +6,7 @@ textfile = os.path.join(".", "example.txt")
 wordCount = 0
 sentenceCount = 0
 AvgwordsLength = 0
-sentenceLength = {}
+AvgsentenceLength = 0
 with open(textfile, "r") as data:
     dataread = data.read()
     wordslist = dataread.split()
@@ -19,4 +19,5 @@ with open(textfile, "r") as data:
     wordCount += len(wordslist)
     sentencelist = re.split("(?<=[.!?]) +", dataread)
     sentenceCount = len(sentencelist)
-    
+    AvgsentenceLength = len(wordslist) / len(sentencelist)
+    print(AvgsentenceLength)
