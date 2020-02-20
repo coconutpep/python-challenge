@@ -18,8 +18,8 @@ Python-Challenge
       
      Takes in a voter_id's vote and counts it both in general and for the specific canidate voted for.
      
-     Analysis provides total number of votes in the election, each canidates number of votes and their corresponding
-     vote percentage, and an overall winner for the election.
+     Analysis provides total number of votes in the election, each canidates number of votes and their 
+     corresponding vote percentage, and an overall winner for the election.
      
      Returns the analysis both to the terminal and a seperate .txt file {election_analysis.txt}
      
