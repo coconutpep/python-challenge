@@ -20,4 +20,10 @@ with open(textfile, "r") as data:
     sentencelist = re.split("(?<=[.!?]) +", dataread)
     sentenceCount = len(sentencelist)
     AvgsentenceLength = len(wordslist) / len(sentencelist)
-    print(AvgsentenceLength)
+
+print("Paragraph Analysis")
+print("------------------")
+print("Approximate Word Count: " + str(wordCount))
+print("Approximate Sentence Count: " + str(sentenceCount))
+print("Average Letter Count Per Word: " + str(AvgwordsLength))
+print("Average Sentence Length: " + str(AvgsentenceLength))
