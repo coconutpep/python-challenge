@@ -9,7 +9,6 @@ netTotal = 0
 with open(csvpath, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     csv_header = next(csvreader)
-    profitloss = [int(row[1]) for row in csvreader]
     for row in csvreader:
         months.append(str(row[0]))
         profitloss.append(int(row[1]))
@@ -31,8 +30,8 @@ print("------------------")
 print("Total Months: ", str(monthTotal))
 print("Total: $", str(netTotal))
 print("Average Change: $", str(averageChange))
-print("Greatest Increase in Profits: ", str(months[(changes.index(greatestChange)) + 1]), "$" + str(greatestChange))
-print("Greatest Decrease in Profits: ", str(months[(changes.index(leastChange)) + 1]), "$" + str(leastChange))
+print("Greatest Increase in Profits: ", str(months[(changes.index(greatestChange)) + 1]) + "$" + str(greatestChange))
+print("Greatest Decrease in Profits: ", str(months[(changes.index(leastChange)) + 1]) + "$" + str(leastChange))
 
 output_path = os.path.join("..", "PyBank", "financial_analysis.txt")
 with open(output_path, 'w', newline='') as txtfile:
